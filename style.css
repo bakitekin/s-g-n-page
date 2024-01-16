@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Rubik+Bubbles&family=Rubik+Maps&display=swap");
+
+:root {
+  --color-primary: rgba(138, 185, 197);
+  --color-primary-dark: rgba(16, 203, 209, 0.482);
+  --color-secondary: rgb(55, 92, 100);
+  --color-error: rgba(210, 40, 40);
+  --color-success: rgba(230, 209, 25, 0.835);
+  --border-radius: 5px;
+  --bg-color-primary: rgba(138, 185, 197);
+  --bg-color-primary-dark: rgb(10, 115, 141);
+  --regular-font-size: 30px;
+  --mobile-font-size: 10px;
+  --box-shadow: 20px 10px 10px red;
+  --input-padding: 0.7rem;
+  --input-regular-border: 2px solid #dddd;
+  --transition-time: 0.3s;
+}
+
+body {
+  background: linear-gradient(
+      to right,
+      var(--color-primary),
+      var(--color-primary-dark)
+    ),
+    url(yazilim-egitimi.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  font-size: var(--regular-font-size);
+  font-family: "Rubik Maps", sans-serif;
+}
+
+.container {
+  background-color: var(--color-primary);
+  width: 400px;
+  max-width: 400px;
+  max-height: 600px;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form_title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Rubik Bubbles", sans-serif;
+}
+
+.form_message,
+.form_message_error {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.form_message_error {
+  color: var(--color-error);
+}
+
+.form_input_group {
+  margin-bottom: 1rem;
+}
+
+.form_input {
+  width: 100%;
+  padding: var(--input-padding);
+  box-sizing: border-box;
+  border-radius: 20px;
+  outline: none;
+  border: var(--input-regular-border);
+  background-color: rgb(176, 220, 224);
+  transition: background var(--transition-time),
+    border-color var(--transition-time);
+}
+
+.form_input:focus {
+  border-color: var(--bg-color-primary);
+  background-color: rgb(239, 239, 222);
+}
+
+.form_input_error_message {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-error);
+}
+
+.form_button {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  color: rgb(172, 224, 233);
+  background-color: rgb(105, 146, 157);
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.form_button:hover {
+  background-color: var(--bg-color-primary-dark);
+}
+
+.form_button:active {
+  transform: scale(0.93);
+}
+
+.form_text {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Arial", sans-serif;
+  font-style: italic;
+}
+
+.form_link {
+  color: rgb(105, 25, 25);
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form_link:hover {
+  text-decoration: underline;
+}
+
+.form > *:first-child {
+  margin-top: 0rem;
+}
+
+.form > *:last-child {
+  margin-bottom: 0rem;
+}
+
+.transition-element {
+  transition: all var(--transition-time) ease-in-out;
+}
